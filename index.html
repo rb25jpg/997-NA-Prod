@@ -4,24 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche 911 997 NA Production Numbers</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #9f1010;
+            color: white;
+            padding: 10px;
+        }
+        #sidebar {
+            background-color: #c1c1c1;
+            padding: 10px;
+            width: 175px
+        ;
+        }
+        #main-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(997.2-gt3rs4.0.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        #production-results {
+            padding: 40px;
+            margin-top: 20px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            opacity: 0.8;
+            font-size: 24px;
+        }
+        #color-display {
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+            border: 2px solid black; /* Adds a black border */
+        }
+
+        footer {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        select, button {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+        select option:disabled {
+            color: gray;
+        }
+        button {
+            cursor: pointer;
+            background-color: #0a58ca;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
 <body>
     <header>
-        <h1>Welcome to the 997 NA Production Calculator</h1>
+        <h1>Porsche 911 997 NA Production Numbers</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="997HTML5.2.html">Please click here to navigate to the calculator/a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>About This Project</h2>
-            <p>Sort 997 Production Numbers by Generation, Trim and Color.</p>
-        </section>
-    </main>
+    <div class="container">
+        <div id="sidebar">
+            <label for="generation">Generation: </label>
+            <select id="generation">
+                <option value="">Select Generation</option>
+                <option value="997.1">997.1</option>
+                <option value="997.2">997.2</option>
+            </select>
+            
+            <label for="trim-level">Trim: </label>
+            <select id="trim-level">
+                <option value="Selct Trim">Select Trim-Level</option>
+                <option value="Turbo(Manual)">Turbo(Manual)</option>
+                <option value="GT3">GT3</option>
+                <option value="GT3RS">GT3RS</option>
+                <option value="GT3RS 4.0">GT3RS 4.0</option>
+                <option value="GT2">GT2</option>
+                <option value="GT2RS">GT2RS</option>
+                <option value="Speedster">Speedster</option>
+
+            </select>
+
+            <label for="color">Color: </label>
+            <select id="color">
+                <option value="Seelct Color">Select Color</option>
+                <option value="Carrera White" data-hex="#ffffff">Carrera White </option>
+                <option value="Black" data-hex="#201A1E">Black </option>
+                <option value="Guards Red" data-hex="#FA2223">Guards Red </option>
+                <option value="Meteor Grey Metallic" data-hex="#748795">Meteor Grey Metallic </option>
+                <option value="Basalt Black Metallic" data-hex="#201A1E">Basalt Black Metallic </option>
+                <option value="GT Silver Metallic" data-hex="#A3ACB3">GT Silver Metallic </option>
+                <option value="Arctic Silver Metallic" data-hex="#AAB1B9">Arctic Silver Metallic </option>
+                <option value="Speed Yellow" data-hex="#F8CD02">Speed Yellow </option>
+                <option value="Aqua Blue Metallic" data-hex="#00B5C8">Aqua Blue Metallic </option>
+                <option value="PTS Non-Metallic" data-hex="#c1c1c1">PTS Non-Metallic</option>
+                <option value="Cream White" data-hex="#FFFDD0">Cream White </option>
+                <option value="Dark Blue Metallic" data-hex="#09203F">Dark Blue Metallic </option>
+                <option value="PTS Metallic" data-hex="#c1c1c1">PTS Metallic </option>
+                <option value="Atlas Grey Metallic" data-hex="#AAB1B9">Atlas Grey Metallic </option>
+                <option value="Ruby Red Metallic" data-hex="#F3037E">Ruby Red Metallic </option>
+                <option value="Nordic Gold Metallic" data-hex="#d4af37">Nordic Gold Metallic </option>
+                <option value="Grey Black" data-hex="#74828B">Grey Black </option>
+                <option value="Orange" data-hex="#FF2600">Orange </option>
+                <option value="Green" data-hex="#029220">Green </option>
+                <option value="Midnight Blue Metallic" data-hex="#09203F">Midnight Blue Metallic </option>
+                <option value="lapis Blue Metallic" data-hex="#0459DA">Lapis Blue Metallic </option>
+                <option value="Dark Olive Metallic" data-hex="#556b2f">Dark Olive Metallic </option>
+                <option value="Slate Grey Metallic" data-hex="#A5A4AC">Slate Grey Metallic </option>
+                <option value="Pure Blue" data-hex="#2971EA">Pure Blue </option>
+                <option value="Platinum Silver Metallic" data-hex="#CECECE">Platinum Silver Metallic</option>
+                <option value="Ice Blue Metallic" data-hex="#739BD0 ">Ice Blue Metallic</option>
+                <option value="Ipanema Blue Metallic" data-hex="#dedad5">Ipanema Blue Metallic</option>
+                <option value="Macadamia Metallic" data-hex="#d5c6ac ">SMacadamia Metallic</option>
+                <option value="Porsche Racing Green" data-hex="#004225">Porsche Racing Green</option>
+                <option value="Cobalt Blue Metallic" data-hex="#0047AB">Cobalt Blue Metallic</option>
+            </select>
+            <div id="color-display" style="width: 175px; height: 80px; margin-top: 1px;" Border=""></div>
+            
+            <!--button onclick="filterProduction()">Filter</button-->
+        </div>
+        <div id="main-content">
+            <div id="production-results">
+                <!-- Result displayed -->
+            </div>
+        </div>
+    </div>
     <footer>
-        <p>Made by Gabriel Koutin. Data courtesy of RabitGT from Rennlist & Autosbyhart from Instagram. Image credit: motoringresearch.com</p>
+        Made by Gabriel Koutin. Data courtesy of RabitGT from Rennlist & Autosbyhart from Instagram. Image credit: motoringresearch.com
     </footer>
-    <script src="997javascript5.0.js"></script> 
+    
+    <script src="997javascript5.0.js"></script>
+</body>
 </html>
