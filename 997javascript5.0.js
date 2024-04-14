@@ -126,7 +126,7 @@ function displayProductionNumbers(numbers) {
                 resultsDiv.innerHTML += "<p>" + number + " produced";
             });
         } else {
-            resultsDiv.innerHTML += "<p>No production numbers found.</p>";
+            resultsDiv.innerHTML += "";
         }
 }
 
